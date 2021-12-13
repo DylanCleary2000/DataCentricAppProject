@@ -1,0 +1,24 @@
+
+<h1>Lecturers</h1>
+<br>
+<form action="/addLecturer">
+    <input type="submit" value="Add Lecturer" />
+</form>
+<br>
+<table border="1px solid black">
+    <tr>
+    <th>Lecturer ID</th>
+    <th>Name</th>
+    <th>Department</th>
+    </tr>
+    <% lecturers.forEach((lecturer) =>
+    { %>
+    <tr>
+    <td><%= lecturer._id %></td>
+    <td><%= lecturer.name %></td>
+    <td><%= lecturer.dept %></td>
+    </tr>
+    <% }) %>
+    </table>
+
+    <a href="/">Home Page</a><br>

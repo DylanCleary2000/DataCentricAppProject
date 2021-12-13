@@ -1,0 +1,31 @@
+<h1>Students</h1>
+<br>
+<form action="/addStudent">
+    <input type="submit" value="Add Student" />
+</form>
+<br>
+<table border="1px solid black">
+    <tr>
+        <th>SID</th>
+        <th>Name</th>
+        <th>GPA</th>
+        <th>Action</th>
+    </tr>
+    <% students.forEach((student)=>
+        { %>
+        <tr>
+            <td>
+                <%= student.sid %>
+            </td>
+            <td>
+                <%= student.name %>
+            </td>
+            <td>
+                <%= student.gpa %>
+            </td>
+            <td><a href="/students/delete/:sid">Delete</a></td>
+        </tr>
+        <% }) %>
+</table>
+
+<a href="/">Home Page</a><br>
